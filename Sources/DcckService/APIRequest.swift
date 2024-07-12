@@ -12,7 +12,7 @@ public struct APIRequest {
     let body: Data?
 
     public static func jsonRequest(url: URL, method: String, parameters: [String: Any]?) throws -> APIRequest {
-        var headers = ["Content-Type": "application/json"]
+        let headers = ["Content-Type": "application/json"]
 
         let body = try parameters.map { try JSONSerialization.data(withJSONObject: $0, options: []) }
 
@@ -20,7 +20,7 @@ public struct APIRequest {
     }
 
     public static func formDataRequest(url: URL, method: String, formData: [String: Any]?, boundary: String) throws -> APIRequest {
-        var headers = ["Content-Type": "multipart/form-data; boundary=\(boundary)"]
+        let headers = ["Content-Type": "multipart/form-data; boundary=\(boundary)"]
 
         let body = try createMultipartFormData(formData, boundary: boundary)
         
