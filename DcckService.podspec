@@ -12,7 +12,7 @@ s.license      = { :type => 'MIT', :file => 'LICENSE' }
 s.author       = { 'Dicka Reynaldi' => 'dickareynaldisiahaan@gmail.com' }
 s.source       = { :git => 'https://github.com/drsiahaan/DcckService.git', :tag => s.version.to_s }
 
-s.ios.deployment_target = '10.0'
+s.ios.deployment_target = '12.0'
 s.source_files  = 'Sources/DcckService/**/*.{swift,h,m}'
 s.swift_version = '5.0'
 end
